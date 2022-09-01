@@ -1,3 +1,5 @@
+function rgbVal() {return Math.floor(Math.random() * 256);}
+
 const container = document.querySelector('#container');
 const adjust = document.querySelector('#adjust');
 
@@ -25,7 +27,6 @@ adjust.addEventListener('click', () => {
 
   let cellSize = Math.floor(960 / rowSize);
 
-  // Grid width will be cellSize * rowSize
   let gridWidth = cellSize * rowSize;
 
   // + 2 for container border of 1px;
@@ -40,7 +41,11 @@ adjust.addEventListener('click', () => {
 container.addEventListener('mouseover', () => {
   for (const square of squares) {
     square.addEventListener('mouseover', () => {
-      square.style.background = 'blue';
+      square.style.background = `rgb(${rgbVal()}, ${rgbVal()}, ${rgbVal()})`;
     })
   }
 })
+
+
+console.log(`${rgbVal()}, ${rgbVal()}, ${rgbVal()}`);
+
