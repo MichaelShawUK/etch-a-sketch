@@ -13,7 +13,7 @@
 }
 
 .square {
-  border: 2px solid green;
+  border: 1px solid rgb(245,245,245);
   aspect-ratio: 1;
   width: 60px;
 }
